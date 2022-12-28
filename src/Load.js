@@ -41,7 +41,6 @@ const Load = {
           },
         });
         const json = await response.json();
-        console.log(json);
         setInitState({
           bitcoin: json?.data,
         });

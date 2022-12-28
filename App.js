@@ -16,10 +16,10 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
-    this.loadesourcesAsync();
+    this.loadResourcesAsync();
   }
 
-  async loadesourcesAsync() {
+  async loadResourcesAsync() {
     await Load.start(this.setAppIsReady, this.setInitState);
   }
   setAppIsReady = async () => {
