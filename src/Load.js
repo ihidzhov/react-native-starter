@@ -33,18 +33,21 @@ const Load = {
         })
       );
 
-      // try {
-      //   const response = await fetch(URLs.crypto, {
-      //     method: "GET",
-      //     headers: {
-      //       "Accept-Encoding": "gzip",
-      //     },
-      //   });
-      //   const json = await response.json();
-      //   setInitState({});
-      // } catch (error) {
-      // } finally {
-      // }
+      try {
+        const response = await fetch(URLs.bitcoin, {
+          method: "GET",
+          headers: {
+            "Accept-Encoding": "gzip",
+          },
+        });
+        const json = await response.json();
+        console.log(json);
+        setInitState({
+          bitcoin: json?.data,
+        });
+      } catch (error) {
+      } finally {
+      }
 
       return Promise.all(assetPromises);
     } catch (e) {

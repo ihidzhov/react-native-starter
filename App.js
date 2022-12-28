@@ -1,6 +1,6 @@
 import React from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, SafeAreaView } from "react-native";
+import { StyleSheet, View, SafeAreaView, Platform } from "react-native";
 import * as SplashScreen from "expo-splash-screen";
 
 import { HomeScreen } from "./src/screens/";
@@ -32,10 +32,13 @@ export default class App extends React.Component {
     }
     return (
       <View style={styles.container}>
+        {Platform.OS === "ios" && <StatusBar barStyle="default" />}
+        {Platform.OS === "android" && (
+          <View style={{ height: 24, backgroundColor: "rgba(0,0,0,0.2)" }} />
+        )}
         <SafeAreaView>
           <HomeScreen />
         </SafeAreaView>
-        <StatusBar style="auto" />
       </View>
     );
   }

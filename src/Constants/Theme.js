@@ -6,7 +6,8 @@ const Colors = {
 };
 
 const FontSize = {
-  DISPLAY: 24,
+  h1: 24,
+  h2: 22,
   title: 20,
   subtitle: 16,
   body: 14,

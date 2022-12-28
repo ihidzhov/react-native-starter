@@ -1,5 +1,6 @@
 const URLs = {
-  crypto: "Accept-Encoding: gzip",
+  crypto: "https://api.coincap.io/v2/assets",
+  bitcoin: "https://api.coincap.io/v2/rates/bitcoin",
 };
 
 export default URLs;
