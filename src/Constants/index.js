@@ -1,6 +1,6 @@
-import Colors from "./Colors";
+import Theme from "./Theme";
 import Images from "./Images";
 import Layout from "./Layout";
 import URLs from "./URLs";
 
-export { Colors, Images, Layout, URLs };
+export { Theme, Images, Layout, URLs };
