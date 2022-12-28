@@ -11,6 +11,7 @@ export default class App extends React.Component {
     super(props);
     this.state = {
       isAppReady: false,
+      data: [],
     };
   }
 
@@ -25,6 +26,11 @@ export default class App extends React.Component {
     this.setState({ isAppReady: true });
     await SplashScreen.hideAsync();
   };
+  setInitState = async (data) => {
+    this.setState({
+      data: data,
+    });
+  };
 
   render() {
     if (!this.state.isAppReady) {
@@ -37,7 +43,7 @@ export default class App extends React.Component {
           <View style={{ height: 24, backgroundColor: "rgba(0,0,0,0.2)" }} />
         )}
         <SafeAreaView>
-          <HomeScreen />
+          <HomeScreen data={this.state.data} />
         </SafeAreaView>
       </View>
     );
