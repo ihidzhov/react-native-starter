@@ -19,7 +19,6 @@ function TextRN({
   letterSpacing,
   ...rest
 }) {
-  console.log(rest);
   return (
     <RNText
       style={[
@@ -52,7 +51,6 @@ export default memo(TextRN);
 
 export function normalize(size) {
   const scale = Layout.window.width / 320;
-  console.log(scale);
   const newSize = size * scale;
   if (Platform.OS === "ios") {
     return Math.round(PixelRatio.roundToNearestPixel(newSize));
