@@ -6,8 +6,11 @@ const Colors = {
 };
 
 const FontSize = {
-  h1: 24,
-  h2: 22,
+  h1: 32,
+  h2: 26,
+  h3: 22,
+  h4: 20,
+  h4: 18,
   title: 20,
   subtitle: 16,
   body: 14,
@@ -16,6 +19,7 @@ const FontSize = {
   small: 10,
   label: 18,
   input: 16,
+  p: 16,
 };
 
 const Theme = {
